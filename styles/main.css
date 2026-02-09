@@ -1,0 +1,106 @@
+/*
+    CSS Stylesheet for Cameron McCullough's Portfolio
+    Developed by: Cameron McCullough
+    Date: 2-8-26
+    Description: External CSS file for portfolio index page and interests page.
+*/
+
+/* ===== General Page Styles ===== */
+
+/* Requirement 3: 10px margin to entire page */
+/* Requirement 6: 725px max body width */
+/* Requirement 10: Light colored background */
+body {
+    margin: 10px auto;
+    max-width: 725px;
+    background-color: #f0f4f8;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+/* Requirement 4: 10px padding to all headings */
+h1, h2, h3, h4, h5, h6 {
+    padding: 10px;
+}
+
+/* Requirement 5: 5px left and right padding to paragraph tags */
+p {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* Requirement 7: 10px left padding to all list items */
+li {
+    padding-left: 10px;
+}
+
+/* Requirement 8: Blue border with rounded corners on header image only */
+/* Requirement 9: Position attribute on image */
+header img {
+    border: 3px solid blue;
+    border-radius: 10px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+/* ===== Navigation Styles ===== */
+nav {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2c3e50;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Header Styles ===== */
+header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* heading colors */
+h1 {
+    color: #2c3e50;
+    margin-bottom: 0;
+}
+
+h2 {
+    color: #5a6c7d;
+    margin-top: 5px;
+}
+
+/* ===== Address / Pre Styles ===== */
+pre {
+    background-color: #e8edf2;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+/* ===== Footer Styles ===== */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+/* ===== Interests Page - Two Column Table Layout ===== */
+
+/* table styling for two-column layout */
+table {
+    border-collapse: collapse;
+}
+
+/* column cell styling */
+table td {
+    vertical-align: top;
+    padding: 10px;
+}
