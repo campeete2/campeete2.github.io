@@ -1,47 +1,48 @@
 /*
     CSS Stylesheet for Cameron McCullough's Portfolio
     Developed by: Cameron McCullough
-    Date: 2-8-26
-    Description: External CSS file for portfolio index page and interests page.
+    Date: 2-22-26
+    Description: External CSS file for portfolio - responsive design with fluid layout and SlickNav.
 */
 
 /* ===== General Page Styles ===== */
 
-/* Requirement 3: 10px margin to entire page */
-/* Requirement 6: 725px max body width */
-/* Requirement 10: Light colored background */
+/* Fluid layout with percentage-based width, max-width for readability */
 body {
     margin: 10px auto;
+    width: 90%;
     max-width: 725px;
     background-color: #f0f4f8;
     font-family: Arial, Helvetica, sans-serif;
     color: #333;
 }
 
-/* Requirement 4: 10px padding to all headings */
+/* 10px padding to all headings */
 h1, h2, h3, h4, h5, h6 {
     padding: 10px;
 }
 
-/* Requirement 5: 5px left and right padding to paragraph tags */
+/* 5px left and right padding to paragraph tags */
 p {
     padding-left: 5px;
     padding-right: 5px;
 }
 
-/* Requirement 7: 10px left padding to all list items */
+/* 10px left padding to all list items */
 li {
     padding-left: 10px;
 }
 
-/* Requirement 8: Blue border with rounded corners on header image only */
-/* Requirement 9: Position attribute on image */
+/* Blue border with rounded corners on header image only */
+/* Position attribute on image */
 header img {
     border: 3px solid blue;
     border-radius: 10px;
     position: relative;
     top: 0;
     left: 0;
+    max-width: 100%;
+    height: auto;
 }
 
 /* ===== Navigation Styles ===== */
@@ -50,9 +51,24 @@ nav {
     margin-bottom: 10px;
 }
 
+/* Desktop nav list styling */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+nav ul li {
+    padding: 0;
+}
+
 nav a {
     text-decoration: none;
     color: #2c3e50;
+    padding: 5px 10px;
 }
 
 nav a:hover {
@@ -82,6 +98,8 @@ pre {
     padding: 10px;
     border-radius: 5px;
     margin: 10px 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 
 /* ===== Footer Styles ===== */
@@ -96,6 +114,7 @@ footer {
 
 /* table styling for two-column layout */
 table {
+    width: 100%;
     border-collapse: collapse;
 }
 
@@ -103,4 +122,117 @@ table {
 table td {
     vertical-align: top;
     padding: 10px;
+}
+
+/* ===== SlickNav Overrides ===== */
+
+/* Hide SlickNav menu on desktop, show regular nav */
+.slicknav_menu {
+    display: none;
+}
+
+/* ===== Media Query 1: Tablets and smaller desktops (max-width: 768px) ===== */
+@media screen and (max-width: 768px) {
+    body {
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    /* Stack the two-column table on tablets */
+    table td {
+        display: block;
+        width: 100%;
+    }
+}
+
+/* ===== Media Query 2: Mobile devices (max-width: 600px) ===== */
+@media screen and (max-width: 600px) {
+    body {
+        width: 100%;
+        margin: 5px auto;
+    }
+
+    /* Hide desktop nav, show SlickNav */
+    nav ul {
+        display: none;
+    }
+
+    .slicknav_menu {
+        display: block;
+    }
+
+    header img {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 1.4em;
+        padding: 5px;
+    }
+
+    h2 {
+        font-size: 1.1em;
+        padding: 5px;
+    }
+
+    h3 {
+        font-size: 1em;
+        padding: 5px;
+    }
+}
+
+/* ===== Media Query 3: Small mobile devices (max-width: 480px) ===== */
+@media screen and (max-width: 480px) {
+    body {
+        width: 100%;
+        margin: 2px auto;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    pre {
+        font-size: 0.85em;
+        padding: 5px;
+    }
+
+    nav {
+        padding: 5px;
+    }
+}
+
+/* ===== Media Query 4: Very small screens (max-width: 360px) ===== */
+@media screen and (max-width: 360px) {
+    body {
+        margin: 0 auto;
+        padding: 2px;
+    }
+
+    header img {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 0.9em;
+    }
+
+    li {
+        padding-left: 5px;
+    }
 }

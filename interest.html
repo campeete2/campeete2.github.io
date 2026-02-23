@@ -7,15 +7,24 @@
         <title>Cameron McCullough - Interests</title>
         <meta name="description" content="Cameron McCullough's interests and hobbies">
         <meta name="keywords" content="interests, hobbies, projects, clubs">
+        <!-- viewport for responsive design -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Link to external CSS stylesheet -->
         <link rel="stylesheet" href="styles/main.css">
+        <!-- SlickNav CSS -->
+        <link rel="stylesheet" href="styles/slicknav.min.css">
     </head>
 
     <body>
         <!-- navigation links -->
         <nav>
-            <a href="index.html">Home</a> |
-            <a href="interest.html">Interests</a>
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="interest.html">Interests</a></li>
+                <li><a href="work.html">Work Experience</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
 
         <!-- header with portfolio graphic -->
@@ -63,7 +72,7 @@
                             <li>Undergraduate Student Government - leadership and procedural work</li>
                             <li>Saluki Entrepreneurship Corps - strategy and innovation</li>
                             <li>Future Business Leaders of America</li>
-                            <li>Computer Science Club - former leadership role</li>
+
                             <li>Journalism Club - helped re-establish; editorial work</li>
                         </ul>
 
@@ -90,6 +99,15 @@
             </p>
         </footer>
 
+        <!-- jQuery and SlickNav JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="js/jquery.slicknav.min.js"></script>
+        <!-- SlickNav initialization -->
+        <script>
+            $(document).ready(function(){
+                $('#menu').slicknav();
+            });
+        </script>
     </body>
 
 </html>
