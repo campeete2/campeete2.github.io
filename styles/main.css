@@ -28,7 +28,7 @@
     { font-size: 1em; }
     aside li { font-size: .875em; }
     /* Stack main and aside on mobile */
-    main { width: 97.917%; float: none; }
+    main.col-left { width: 97.917%; float: none; }
     aside { width: 97.917%; float: none; }
 }
 
@@ -42,7 +42,7 @@
     article h1, main h2, aside h2
     { font-size: 1em; }
     aside li { font-size: .875em; }
-    main { width: 97.917%; float: none; }
+    main.col-left { width: 97.917%; float: none; }
     aside { width: 97.917%; float: none; }
 }
 
@@ -67,11 +67,16 @@ header {
     text-align: center;
 }
 
-/* ===== Main and Aside - Two Column Float Layout ===== */
+/* ===== Main Content ===== */
 main {
-    width: 47.917%;
+    width: 97.917%;
     padding: 10px 1.0417%;
     background-color: #ffffff;
+}
+
+/* ===== Two Column Float Layout (Interests Page) ===== */
+main.col-left {
+    width: 47.917%;
     float: left;
 }
 
