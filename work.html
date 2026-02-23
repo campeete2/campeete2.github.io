@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<!-- @author Cameron McCullough, Occupational/Work Experience Page
+  Southern Illinois University 
+  Developed 2-22-26, and date tested 2-22-26 Comment Header for my website -->
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>Cameron McCullough - Work Experience</title>
+        <!-- meta description and keywords -->
+        <meta name="description" content="Cameron McCullough's work experience and professional background">
+        <meta name="keywords" content="work experience, occupational, professional, resume">
+        <!-- viewport for responsive design -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Link to external CSS stylesheet -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- SlickNav CSS -->
+        <link rel="stylesheet" href="styles/slicknav.css">
+        <!-- jQuery and SlickNav JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="js/jquery.slicknav.min.js"></script>
+        <!-- SlickNav initialization -->
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+            });
+        </script>
+    </head>
+
+    <body>
+        <!-- header with portfolio graphic -->
+        <header>
+            <img src="images/6K6A9623.jpg" alt="Personal Portfolio Logo" width="500px">
+        </header>
+        <!-- mobile menu placeholder for SlickNav -->
+        <nav id="mobile_menu"></nav>
+        <!-- desktop navigation links -->
+        <nav id="nav_menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="interest.html">Interests</a></li>
+                <li><a href="work.html" class="current">Work Experience</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <main>
+            <!-- heading and introduction -->
+            <h1>Work Experience</h1>
+            <h2>Professional Background</h2>
+
+            <!-- work experience entries -->
+            <h3>Dreampark Labs - Founder</h3>
+            <p>
+                Leading a student-product ecosystem featuring Northstar, an academic tool designed to help students succeed. Responsible for product vision, development strategy, and team coordination.
+            </p>
+
+            <h3>Empty Sandbox - Consultant</h3>
+            <p>
+                Providing custom websites, marketing/SEO, and DevOps consulting services. Working with clients to deliver tailored digital solutions and improve their online presence.
+            </p>
+
+            <!-- business ventures -->
+            <h3>Alexander Elyse Capital LLC - Managing Member</h3>
+            <p>
+                Overseeing business structure, investing, and portfolio strategy. Focused on building sustainable financial frameworks and investment opportunities.
+            </p>
+
+            <h3>Southern Illinois University - Student Worker</h3>
+            <p>
+                Contributing to campus operations while developing professional skills in communication, teamwork, and technical problem-solving.
+            </p>
+
+        </main>
+        <!-- footer with copyright -->
+        <footer>
+            <p>
+                &copy; 2026 Cameron McCullough. All Rights Reserved.
+            </p>
+        </footer>
+
+    </body>
+
+</html>
