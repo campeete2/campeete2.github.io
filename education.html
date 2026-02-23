@@ -15,25 +15,35 @@
         <!-- Link to external CSS stylesheet -->
         <link rel="stylesheet" href="styles/main.css">
         <!-- SlickNav CSS -->
-        <link rel="stylesheet" href="styles/slicknav.min.css">
+        <link rel="stylesheet" href="styles/slicknav.css">
+        <!-- jQuery and SlickNav JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="js/jquery.slicknav.min.js"></script>
+        <!-- SlickNav initialization -->
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+            });
+        </script>
     </head>
 
     <body>
-        <!-- navigation links -->
-        <nav>
-            <ul id="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="interest.html">Interests</a></li>
-                <li><a href="work.html">Work Experience</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-
         <!-- header with portfolio graphic -->
         <header>
             <img src="images/6K6A9623.jpg" alt="Personal Portfolio Logo" width="500px">
         </header>
+        <!-- mobile menu placeholder for SlickNav -->
+        <nav id="mobile_menu"></nav>
+        <!-- desktop navigation links -->
+        <nav id="nav_menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="interest.html">Interests</a></li>
+                <li><a href="work.html">Work Experience</a></li>
+                <li><a href="education.html" class="current">Education</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
         <main>
             <!-- heading and introduction -->
             <h1>Education</h1>
@@ -83,15 +93,6 @@
             </p>
         </footer>
 
-        <!-- jQuery and SlickNav JS -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="js/jquery.slicknav.min.js"></script>
-        <!-- SlickNav initialization -->
-        <script>
-            $(document).ready(function(){
-                $('#menu').slicknav();
-            });
-        </script>
     </body>
 
 </html>

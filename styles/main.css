@@ -5,27 +5,127 @@
     Description: External CSS file for portfolio - responsive design with fluid layout and SlickNav.
 */
 
+/* ===== Media Queries for Responsive Design ===== */
+
+/* Media Query 1: Large screens - hide mobile menu */
+@media only screen and (max-width: 2024px) {
+    #mobile_menu {display: none;}
+}
+
+/* Media Query 2: Smaller desktops - hide mobile menu */
+@media only screen and (max-width: 959px) {
+    #mobile_menu {display: none;}
+}
+
+/* Media Query 3: Tablets and mobile - show mobile menu, hide desktop nav */
+@media only screen and (max-width: 767px) {
+    #mobile_menu {display: block;}
+    #nav_menu { display: none; }
+    header h2 { font-size: 1.375em; }
+    header h3 { font-size: .8125em; }
+    p { font-size: .875em; }
+    article h1, main h2, aside h2
+    { font-size: 1em; }
+    aside li { font-size: .875em; }
+    /* Stack main and aside on mobile */
+    main { width: 97.917%; float: none; }
+    aside { width: 97.917%; float: none; }
+}
+
+/* Media Query 4: Small mobile devices */
+@media only screen and (max-width: 479px) {
+    #mobile_menu {display: block;}
+    #nav_menu { display: none; }
+    header h2 { font-size: 1.375em; }
+    header h3 { font-size: .8125em; }
+    p { font-size: .875em; }
+    article h1, main h2, aside h2
+    { font-size: 1em; }
+    aside li { font-size: .875em; }
+    main { width: 97.917%; float: none; }
+    aside { width: 97.917%; float: none; }
+}
+
 /* ===== General Page Styles ===== */
 
-/* Fluid layout with percentage-based width, max-width for readability */
+/* Fluid layout with percentage-based width */
 body {
-    margin: 10px auto;
+    font-size: 1em;
     width: 90%;
-    max-width: 725px;
+    max-width: 1024px;
     background-color: #f0f4f8;
+    margin: 10px auto;
     font-family: Arial, Helvetica, sans-serif;
     color: #333;
 }
 
-/* 10px padding to all headings */
-h1, h2, h3, h4, h5, h6 {
+/* ===== Header Styles ===== */
+header {
+    width: 97.917%;
+    padding: 10px 1.0417%;
+    clear: both;
+    text-align: center;
+}
+
+/* ===== Main and Aside - Two Column Float Layout ===== */
+main {
+    width: 47.917%;
+    padding: 10px 1.0417%;
+    background-color: #ffffff;
+    float: left;
+}
+
+aside {
+    width: 47.917%;
+    padding: 10px 1.0417%;
+    background-color: #ffffff;
+    float: right;
+}
+
+/* ===== Heading Styles ===== */
+h1 {
+    font-size: 1.75em;
+    padding: 10px;
+    color: #2c3e50;
+}
+
+h2 {
+    font-size: 1.5em;
+    padding: 10px;
+    color: #5a6c7d;
+}
+
+h3 {
+    font-size: 1.125em;
     padding: 10px;
 }
 
 /* 5px left and right padding to paragraph tags */
 p {
+    font-size: 1.125em;
     padding-left: 5px;
     padding-right: 5px;
+}
+
+/* ===== Blockquote Styles ===== */
+blockquote {
+    width: 47.917%;
+    padding: 10px 1.0417%;
+}
+
+/* ===== Footer Styles ===== */
+footer {
+    font-size: .75em;
+    width: 97.917%;
+    padding: 10px 1.0417%;
+    clear: both;
+    text-align: center;
+    border-top: 1px solid #ccc;
+}
+
+/* ===== List Styles ===== */
+ul {
+    padding-left: 10px;
 }
 
 /* 10px left padding to all list items */
@@ -33,63 +133,47 @@ li {
     padding-left: 10px;
 }
 
+/* ===== Navigation Styles ===== */
+#nav_menu ul {
+    list-style-type: none;
+    padding: 1em 0;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+#nav_menu ul li {
+    display: inline;
+    padding: 0 1em;
+}
+
+#nav_menu ul li a {
+    font-weight: bold;
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+#nav_menu ul li a:hover {
+    text-decoration: underline;
+}
+
+#nav_menu ul li a.current {
+    text-decoration: none;
+}
+
+/* ===== Image Styles ===== */
 /* Blue border with rounded corners on header image only */
 /* Position attribute on image */
+.bluetouch img,
 header img {
     border: 3px solid blue;
     border-radius: 10px;
     position: relative;
-    top: 0;
-    left: 0;
     max-width: 100%;
     height: auto;
 }
 
-/* ===== Navigation Styles ===== */
-nav {
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-/* Desktop nav list styling */
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-}
-
-nav ul li {
-    padding: 0;
-}
-
-nav a {
-    text-decoration: none;
-    color: #2c3e50;
-    padding: 5px 10px;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* ===== Header Styles ===== */
-header {
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-/* heading colors */
-h1 {
-    color: #2c3e50;
-    margin-bottom: 0;
-}
-
-h2 {
-    color: #5a6c7d;
-    margin-top: 5px;
+img {
+    position: static;
 }
 
 /* ===== Address / Pre Styles ===== */
@@ -100,139 +184,4 @@ pre {
     margin: 10px 0;
     white-space: pre-wrap;
     word-wrap: break-word;
-}
-
-/* ===== Footer Styles ===== */
-footer {
-    text-align: center;
-    margin-top: 20px;
-    border-top: 1px solid #ccc;
-    padding-top: 10px;
-}
-
-/* ===== Interests Page - Two Column Table Layout ===== */
-
-/* table styling for two-column layout */
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-/* column cell styling */
-table td {
-    vertical-align: top;
-    padding: 10px;
-}
-
-/* ===== SlickNav Overrides ===== */
-
-/* Hide SlickNav menu on desktop, show regular nav */
-.slicknav_menu {
-    display: none;
-}
-
-/* ===== Media Query 1: Tablets and smaller desktops (max-width: 768px) ===== */
-@media screen and (max-width: 768px) {
-    body {
-        width: 95%;
-    }
-
-    h1 {
-        font-size: 1.6em;
-    }
-
-    h2 {
-        font-size: 1.2em;
-    }
-
-    /* Stack the two-column table on tablets */
-    table td {
-        display: block;
-        width: 100%;
-    }
-}
-
-/* ===== Media Query 2: Mobile devices (max-width: 600px) ===== */
-@media screen and (max-width: 600px) {
-    body {
-        width: 100%;
-        margin: 5px auto;
-    }
-
-    /* Hide desktop nav, show SlickNav */
-    nav ul {
-        display: none;
-    }
-
-    .slicknav_menu {
-        display: block;
-    }
-
-    header img {
-        width: 90%;
-    }
-
-    h1 {
-        font-size: 1.4em;
-        padding: 5px;
-    }
-
-    h2 {
-        font-size: 1.1em;
-        padding: 5px;
-    }
-
-    h3 {
-        font-size: 1em;
-        padding: 5px;
-    }
-}
-
-/* ===== Media Query 3: Small mobile devices (max-width: 480px) ===== */
-@media screen and (max-width: 480px) {
-    body {
-        width: 100%;
-        margin: 2px auto;
-    }
-
-    h1 {
-        font-size: 1.2em;
-    }
-
-    h2 {
-        font-size: 1em;
-    }
-
-    pre {
-        font-size: 0.85em;
-        padding: 5px;
-    }
-
-    nav {
-        padding: 5px;
-    }
-}
-
-/* ===== Media Query 4: Very small screens (max-width: 360px) ===== */
-@media screen and (max-width: 360px) {
-    body {
-        margin: 0 auto;
-        padding: 2px;
-    }
-
-    header img {
-        width: 100%;
-    }
-
-    h1 {
-        font-size: 1em;
-    }
-
-    h2 {
-        font-size: 0.9em;
-    }
-
-    li {
-        padding-left: 5px;
-    }
 }
