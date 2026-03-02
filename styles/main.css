@@ -175,6 +175,24 @@ header img {
     position: relative;
     max-width: 100%;
     height: auto;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+/* ===== Video Styles ===== */
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+
+/* ===== Work Page Graphic (no effects) ===== */
+.work-graphic {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
 }
 
 img {

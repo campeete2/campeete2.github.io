@@ -12,6 +12,8 @@
         <meta name="keywords" content="education, academic, university, degree">
         <!-- viewport for responsive design -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- shortcut icon -->
+        <link rel="icon" type="image/png" href="images/favicon.png">
         <!-- Link to external CSS stylesheet -->
         <link rel="stylesheet" href="styles/main.css">
         <!-- SlickNav CSS -->
@@ -30,7 +32,9 @@
     <body>
         <!-- header with portfolio graphic -->
         <header>
-            <img src="images/6K6A9623.jpg" alt="Personal Portfolio Logo" width="500px">
+            <img src="images/6K6A9623.jpg" alt="Personal Portfolio Logo" width="500px"
+                onmouseover="this.src='images/header-hover.jpg'"
+                onmouseout="this.src='images/6K6A9623.jpg'">
         </header>
         <!-- mobile menu placeholder for SlickNav -->
         <nav id="mobile_menu"></nav>
@@ -78,6 +82,13 @@
                 <li>Ethical and Legal Issues in IT (ITEC-314)</li>
                 <li>Introduction to Programming (ITEC-209)</li>
             </ul>
+
+            <!-- embedded video that autoplays with controls -->
+            <h3>Campus Video</h3>
+            <video autoplay controls>
+                <source src="video/siu.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
 
             <!-- certifications and achievements -->
             <h3>Achievements &amp; Involvement</h3>
