@@ -208,3 +208,54 @@ pre {
     white-space: pre-wrap;
     word-wrap: break-word;
 }
+
+/* ===== Portfolio Table Styles (Lab 5) ===== */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    margin: 10px 0;
+}
+
+.portfolio-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #2c3e50;
+    background-color: #ffffff;
+}
+
+.portfolio-table caption {
+    caption-side: top;
+    text-align: left;
+    font-weight: bold;
+    padding: 8px 4px;
+    color: #2c3e50;
+}
+
+.portfolio-table th,
+.portfolio-table td {
+    border: 1px solid #2c3e50;
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.portfolio-table thead {
+    background-color: #e8edf2;
+}
+
+.portfolio-table tfoot td {
+    font-weight: bold;
+    background-color: #f7f9fb;
+}
+
+@media only screen and (max-width: 470px) {
+    .portfolio-table {
+        min-width: 700px;
+    }
+
+    .portfolio-table th,
+    .portfolio-table td {
+        padding: 6px;
+        font-size: .85em;
+    }
+}
