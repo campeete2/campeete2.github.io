@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<!-- @author Cameron McCullough, Form Response Page
+  Southern Illinois University 
+  Developed 4-5-26, and date tested 4-5-26 Comment Header for my website -->
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>Cameron McCullough - Form Submitted</title>
+        <!-- meta description and keywords -->
+        <meta name="description" content="Form submission response page">
+        <meta name="keywords" content="contact, form, response">
+        <!-- viewport for responsive design -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- shortcut icon -->
+        <link rel="icon" type="image/png" href="images/favicon.png">
+        <!-- Link to external CSS stylesheet -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- SlickNav CSS -->
+        <link rel="stylesheet" href="styles/slicknav.css">
+        <!-- jQuery and SlickNav JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="js/jquery.slicknav.min.js"></script>
+        <!-- SlickNav initialization -->
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+            });
+        </script>
+        <!-- Script to read and display GET parameters -->
+        <script type="text/javascript">
+            window.onload = function() {
+                const params = new URLSearchParams(window.location.search);
+                const fields = {
+                    email:        'Email',
+                    fullname:     'Full Name',
+                    address:      'Address',
+                    city:         'City',
+                    state:        'State',
+                    zip:          'ZIP Code',
+                    phone:        'Phone Number',
+                    creationdate: 'Creation Date',
+                    message:      'Message',
+                    inquiry:      'Type of Inquiry'
+                };
+                let html = '<table border="1" cellpadding="8">';
+                html += '<tr><th>Field</th><th>Value</th></tr>';
+                for (const [key, label] of Object.entries(fields)) {
+                    const value = params.get(key) || '<em>Not provided</em>';
+                    html += '<tr><td><strong>' + label + '</strong></td><td>' + value + '</td></tr>';
+                }
+                html += '</table>';
+                document.getElementById('response_data').innerHTML = html;
+            };
+        </script>
+    </head>
+
+    <body>
+        <!-- header with portfolio graphic -->
+        <header>
+            <img src="images/6K6A9623.jpg" alt="Personal Portfolio Logo" width="500px"
+                onmouseover="this.src='images/header-hover.jpg'"
+                onmouseout="this.src='images/6K6A9623.jpg'">
+        </header>
+        <!-- mobile menu placeholder for SlickNav -->
+        <nav id="mobile_menu"></nav>
+        <!-- desktop navigation links -->
+        <nav id="nav_menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="interest.html">Interests</a></li>
+                <li><a href="work.html">Work Experience</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="contact.html" class="current">Contact</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1>Form Submitted</h1>
+            <h2>Thank You!</h2>
+            <p>Your message has been received. Here is a summary of the information you submitted:</p>
+
+            <div id="response_data"></div>
+
+            <br>
+            <p><a href="contact.html">Return to Contact Page</a></p>
+        </main>
+        <!-- footer with copyright -->
+        <footer>
+            <p>
+                &copy; 2026 Cameron McCullough. All Rights Reserved.
+            </p>
+        </footer>
+
+    </body>
+
+</html>
